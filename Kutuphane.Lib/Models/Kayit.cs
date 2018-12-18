@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kutuphane.Lib.Models
 {
-    class Kayit
+    public class Kayit
     {
     }
 }

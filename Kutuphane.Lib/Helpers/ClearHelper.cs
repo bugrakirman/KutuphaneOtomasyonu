@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kutuphane.Lib.Helpers
 {
-    class ClearHelper
+    public class ClearHelper
     {
     }
 }

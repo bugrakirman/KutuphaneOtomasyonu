@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Kutuphane.Lib.Models
 {
-    class Kitap
+    public class Kitap
     {
+        public string KitapAd { get; set; }
     }
 }

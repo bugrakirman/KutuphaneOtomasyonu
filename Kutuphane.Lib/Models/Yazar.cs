@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Kutuphane.Lib.Models
 {
-    class Yazar
+    public class Yazar
     {
+        public string Ad { get; set; }
+        public string Soyad { get; set; }
     }
 }

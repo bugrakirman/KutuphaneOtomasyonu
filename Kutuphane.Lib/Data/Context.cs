@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Kutuphane.Lib.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Kutuphane.Lib.Data
 {
-    class Context
+    public class Context
     {
+        public List<Kayit> Kayitlar = new List<Kayit>();
+        public List<Kitap> Kitaplar = new List<Kitap>();
+        public List<Yazar> Yazarlar = new List<Yazar>();
+        public List<Uye> Uyeler = new List<Uye>();
     }
 }
