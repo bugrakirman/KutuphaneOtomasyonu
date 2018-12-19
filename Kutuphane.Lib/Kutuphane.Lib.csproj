@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\AddingData.cs" />
     <Compile Include="Data\Context.cs" />
     <Compile Include="Data\MockData.cs" />
     <Compile Include="Helpers\ClearHelper.cs" />
