@@ -52,6 +52,7 @@
     <Compile Include="Helpers\SearchHelper.cs" />
     <Compile Include="Models\Kayit.cs" />
     <Compile Include="Models\Kitap.cs" />
+    <Compile Include="Models\KitapKategorileri.cs" />
     <Compile Include="Models\Uye.cs" />
     <Compile Include="Models\Yazar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

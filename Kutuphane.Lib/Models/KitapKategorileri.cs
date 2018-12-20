@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Kutuphane.Lib.Models
 {
-    public class Kitap
+    public enum KitapKategorileri
     {
-        public string KitapAd { get; set; }
-        public string YazarAd { get; set; }
-        public string YazarSoyad { get; set; }
+        Bilimsel,
+        Cocuk,
+        Felsefe,
+        Edebiyat,
+        Tarih,
+        BilimKurgu
     }
 }
