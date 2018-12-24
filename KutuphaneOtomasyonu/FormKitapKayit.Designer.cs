@@ -106,6 +106,7 @@
             this.lstKitaplar.Name = "lstKitaplar";
             this.lstKitaplar.Size = new System.Drawing.Size(219, 173);
             this.lstKitaplar.TabIndex = 7;
+            this.lstKitaplar.SelectedIndexChanged += new System.EventHandler(this.lstKitaplar_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -123,7 +124,6 @@
             this.cmbKitapKategori.Name = "cmbKitapKategori";
             this.cmbKitapKategori.Size = new System.Drawing.Size(125, 21);
             this.cmbKitapKategori.TabIndex = 9;
-            this.cmbKitapKategori.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // frmKitapKayit
             // 
@@ -142,6 +142,7 @@
             this.Controls.Add(this.txtKitapAd);
             this.Name = "frmKitapKayit";
             this.Text = "FormKitapKayit";
+            this.Load += new System.EventHandler(this.frmKitapKayit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

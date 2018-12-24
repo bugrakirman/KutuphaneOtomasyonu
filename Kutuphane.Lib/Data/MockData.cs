@@ -35,7 +35,10 @@ namespace Kutuphane.Lib.Data
             {
                 Context.Kitaplar.Add(new Kitap()
                 {
-                    KitapAd = FakeData.PlaceData.GetCountry()
+                    KitapAd = FakeData.PlaceData.GetCountry(),
+                    YazarAd= FakeData.NameData.GetFirstName(),
+                    YazarSoyad= FakeData.NameData.GetSurname()
+
                 });
             }
         }
