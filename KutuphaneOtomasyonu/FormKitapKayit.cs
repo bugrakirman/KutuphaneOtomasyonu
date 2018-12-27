@@ -50,5 +50,10 @@ namespace KutuphaneOtomasyonu
         {
             cmbKitapKategori.DataSource = Enum.GetNames(typeof(KitapKategorileri));
         }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            lstKitaplar.DataSource = SearchHelper.Ara<Kitap>(Form1.Context.Kitaplar, txtAra.Text);
+        }
     }
 }

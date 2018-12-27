@@ -14,7 +14,7 @@ namespace Kutuphane.Lib.Models
         public KitapKategorileri Kategori { get; set; }
         public override string ToString()
         {
-            return $"{this.KitapAd} {this.YazarAd} {this.YazarSoyad} {this.Kategori}";
+            return $"{this.KitapAd} - {this.YazarAd} {this.YazarSoyad} - {this.Kategori}";
         }
     }
 }

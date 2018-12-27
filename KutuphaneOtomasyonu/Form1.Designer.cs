@@ -30,13 +30,15 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.kitapKayıtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yazarKayıtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kitapKayıtToolStripMenuItem});
+            this.kitapKayıtToolStripMenuItem,
+            this.yazarKayıtToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -49,6 +51,13 @@
             this.kitapKayıtToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.kitapKayıtToolStripMenuItem.Text = "Kitap Kayıt";
             this.kitapKayıtToolStripMenuItem.Click += new System.EventHandler(this.kitapKayıtToolStripMenuItem_Click);
+            // 
+            // yazarKayıtToolStripMenuItem
+            // 
+            this.yazarKayıtToolStripMenuItem.Name = "yazarKayıtToolStripMenuItem";
+            this.yazarKayıtToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.yazarKayıtToolStripMenuItem.Text = "Yazar Kayıt";
+            this.yazarKayıtToolStripMenuItem.Click += new System.EventHandler(this.yazarKayıtToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -72,6 +81,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem kitapKayıtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem yazarKayıtToolStripMenuItem;
     }
 }
 

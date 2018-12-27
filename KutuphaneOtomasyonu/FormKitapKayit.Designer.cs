@@ -38,6 +38,7 @@
             this.lstKitaplar = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbKitapKategori = new System.Windows.Forms.ComboBox();
+            this.txtAra = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtKitapAd
@@ -125,11 +126,20 @@
             this.cmbKitapKategori.Size = new System.Drawing.Size(125, 21);
             this.cmbKitapKategori.TabIndex = 9;
             // 
+            // txtAra
+            // 
+            this.txtAra.Location = new System.Drawing.Point(299, 23);
+            this.txtAra.Name = "txtAra";
+            this.txtAra.Size = new System.Drawing.Size(219, 20);
+            this.txtAra.TabIndex = 10;
+            this.txtAra.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
+            // 
             // frmKitapKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(708, 328);
+            this.Controls.Add(this.txtAra);
             this.Controls.Add(this.cmbKitapKategori);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lstKitaplar);
@@ -160,5 +170,6 @@
         private System.Windows.Forms.ListBox lstKitaplar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbKitapKategori;
+        private System.Windows.Forms.TextBox txtAra;
     }
 }

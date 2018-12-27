@@ -17,7 +17,16 @@ namespace KutuphaneOtomasyonu
         {
             InitializeComponent();
         }
+
         frmKitapKayit frmKitapKayit;
+        frmYazarKayit frmYazarKayit;
+
+        public static Context Context { get; set; }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Context = new MockData().Context;
+        }
+
         private void kitapKayıtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (frmKitapKayit == null || frmKitapKayit.IsDisposed)
@@ -30,10 +39,19 @@ namespace KutuphaneOtomasyonu
                 frmKitapKayit.Show();
             }
         }
-        public static Context Context { get; set; }
-        private void Form1_Load(object sender, EventArgs e)
+       
+
+        private void yazarKayıtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Context = new MockData().Context;
+            if (frmYazarKayit == null || frmYazarKayit.IsDisposed)
+            {
+                frmYazarKayit = new frmYazarKayit
+                {
+                    Text = "Yazar Kayıt",
+                    MdiParent = this
+                };
+                frmYazarKayit.Show();
+            }
         }
     }
 }
