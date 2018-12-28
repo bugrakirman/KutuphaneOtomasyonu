@@ -1,4 +1,5 @@
 ﻿using Kutuphane.Lib.Models;
+using KutuphaneOtomasyonu.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -30,10 +31,9 @@ namespace Kutuphane.Lib.Entities
         public int YazarId { get; set; }
         [ForeignKey("YazarId")]
         public virtual Yazar yazar { get; set; }
-        //[StringLength(200)]
-        //public string Aciklama { get; set; }
-        //public DateTime EklenmeZamani { get; set; } = DateTime.Now;
 
-        //public virtual ICollection<Urun> Urunler { get; set; } = new HashSet<Urun>();
+   
+     
+        
     }
 }

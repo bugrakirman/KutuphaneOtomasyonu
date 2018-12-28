@@ -31,14 +31,12 @@
             this.txtKitapAd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnKitapKaydet = new System.Windows.Forms.Button();
-            this.txtYazarAd = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtYazarSoyad = new System.Windows.Forms.TextBox();
             this.lstKitaplar = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbKitapKategori = new System.Windows.Forms.ComboBox();
             this.txtAra = new System.Windows.Forms.TextBox();
+            this.cmbKitapYazarlar = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtKitapAd
@@ -67,38 +65,6 @@
             this.btnKitapKaydet.UseVisualStyleBackColor = true;
             this.btnKitapKaydet.Click += new System.EventHandler(this.btnKitapKaydet_Click);
             // 
-            // txtYazarAd
-            // 
-            this.txtYazarAd.Location = new System.Drawing.Point(141, 86);
-            this.txtYazarAd.Name = "txtYazarAd";
-            this.txtYazarAd.Size = new System.Drawing.Size(125, 20);
-            this.txtYazarAd.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Yazar Adı";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Yazar Soyadı";
-            // 
-            // txtYazarSoyad
-            // 
-            this.txtYazarSoyad.Location = new System.Drawing.Point(141, 123);
-            this.txtYazarSoyad.Name = "txtYazarSoyad";
-            this.txtYazarSoyad.Size = new System.Drawing.Size(125, 20);
-            this.txtYazarSoyad.TabIndex = 6;
-            // 
             // lstKitaplar
             // 
             this.lstKitaplar.FormattingEnabled = true;
@@ -107,12 +73,11 @@
             this.lstKitaplar.Name = "lstKitaplar";
             this.lstKitaplar.Size = new System.Drawing.Size(219, 173);
             this.lstKitaplar.TabIndex = 7;
-            //this.lstKitaplar.SelectedIndexChanged += new System.EventHandler(this.lstKitaplar_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 163);
+            this.label4.Location = new System.Drawing.Point(29, 126);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 8;
@@ -121,7 +86,7 @@
             // cmbKitapKategori
             // 
             this.cmbKitapKategori.FormattingEnabled = true;
-            this.cmbKitapKategori.Location = new System.Drawing.Point(141, 160);
+            this.cmbKitapKategori.Location = new System.Drawing.Point(141, 123);
             this.cmbKitapKategori.Name = "cmbKitapKategori";
             this.cmbKitapKategori.Size = new System.Drawing.Size(125, 21);
             this.cmbKitapKategori.TabIndex = 9;
@@ -134,19 +99,34 @@
             this.txtAra.TabIndex = 10;
             this.txtAra.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
+            // cmbKitapYazarlar
+            // 
+            this.cmbKitapYazarlar.FormattingEnabled = true;
+            this.cmbKitapYazarlar.Location = new System.Drawing.Point(141, 86);
+            this.cmbKitapYazarlar.Name = "cmbKitapYazarlar";
+            this.cmbKitapYazarlar.Size = new System.Drawing.Size(125, 21);
+            this.cmbKitapYazarlar.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 89);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Yazar Soyadı";
+            // 
             // frmKitapKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 328);
+            this.Controls.Add(this.cmbKitapYazarlar);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtAra);
             this.Controls.Add(this.cmbKitapKategori);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lstKitaplar);
-            this.Controls.Add(this.txtYazarSoyad);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtYazarAd);
             this.Controls.Add(this.btnKitapKaydet);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtKitapAd);
@@ -163,13 +143,11 @@
         private System.Windows.Forms.TextBox txtKitapAd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnKitapKaydet;
-        private System.Windows.Forms.TextBox txtYazarAd;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtYazarSoyad;
         private System.Windows.Forms.ListBox lstKitaplar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbKitapKategori;
         private System.Windows.Forms.TextBox txtAra;
+        private System.Windows.Forms.ComboBox cmbKitapYazarlar;
+        private System.Windows.Forms.Label label2;
     }
 }

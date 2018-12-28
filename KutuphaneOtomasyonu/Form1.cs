@@ -20,6 +20,7 @@ namespace KutuphaneOtomasyonu
 
         frmKitapKayit frmKitapKayit;
         frmYazarKayit frmYazarKayit;
+        frmUyeKayit frmUyeKayit;
 
         public static Context Context { get; set; }
         private void Form1_Load(object sender, EventArgs e)
@@ -51,6 +52,19 @@ namespace KutuphaneOtomasyonu
                     MdiParent = this
                 };
                 frmYazarKayit.Show();
+            }
+        }
+
+        private void uyeKayıtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmUyeKayit == null || frmUyeKayit.IsDisposed)
+            {
+                frmUyeKayit = new frmUyeKayit
+                {
+                    Text = "Uye Kayıt",
+                    MdiParent = this
+                };
+                frmUyeKayit.Show();
             }
         }
     }

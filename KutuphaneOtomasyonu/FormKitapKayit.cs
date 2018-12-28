@@ -7,6 +7,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Kutuphane.Lib.ViewModals;
 using System.Data.Entity.Validation;
+using KutuphaneOtomasyonu.ViewModals;
 
 namespace KutuphaneOtomasyonu
 {
@@ -32,6 +33,7 @@ namespace KutuphaneOtomasyonu
                     YazarAdi = x.YazarAdi,
                     YazarSoyadi = x.YazarSoyadi,
                     Kategori = x.Kategori
+                   
                 })
                 .ToList();
            
@@ -45,15 +47,21 @@ namespace KutuphaneOtomasyonu
         {
             try
             {
-                if (txtKitapAd.Text == null || txtYazarAd.Text == null || txtYazarSoyad.Text == null) return;
+                if (txtKitapAd.Text == null ) return;
                 //ep1.Clear();
                 Context db = new Context();
+
+
+
+
+
                 db.Kitaplar.Add(new Kitap()
                 {
+                      YazarId= (cmbKitapYazarlar.SelectedItem as YazarViewModel).YazarId,
+                       
                     KitapAdi = string.IsNullOrEmpty(txtKitapAd.Text) ? null : txtKitapAd.Text, //boş kaydetmesin diye
-                    YazarId = 1,
-                    YazarAdi = txtYazarAd.Text,
-                    YazarSoyadi = txtYazarSoyad.Text,
+                    YazarAdi = (cmbKitapYazarlar.SelectedItem as YazarViewModel).YazarAdi,
+                    YazarSoyadi = (cmbKitapYazarlar.SelectedItem as YazarViewModel).YazarSoyadi,
                     Kategori = (KitapKategorileri)Enum.Parse(typeof(KitapKategorileri),cmbKitapKategori.SelectedItem.ToString())
                 });
                 int sonuc = db.SaveChanges();
@@ -62,14 +70,6 @@ namespace KutuphaneOtomasyonu
             }
             catch (DbEntityValidationException ex)
             {
-                //foreach (var validationError in ex.EntityValidationErrors)
-                //{
-                //    foreach (var error in validationError.ValidationErrors)
-                //    {
-                //        if (error.PropertyName == "KitapAdi")
-                //            //ep1.SetError(txtKitapAd, error.ErrorMessage);
-                //    }
-                //}
                 MessageBox.Show(EntityHelper.ValidationMessage(ex), "Bir hata olustu", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
@@ -101,7 +101,16 @@ namespace KutuphaneOtomasyonu
 
         private void frmKitapKayit_Load(object sender, EventArgs e)
         {
+            Context db = new Context();
             cmbKitapKategori.DataSource = Enum.GetNames(typeof(KitapKategorileri));
+            cmbKitapYazarlar.DataSource = db.Yazarlar.Select(x=> new YazarViewModel {
+                YazarAdi=x.YazarAdi,
+                 YazarSoyadi=x.YazarSoyadi,
+                  Kategori=x.Kategori,
+                   YazarId=x.YazarId
+                   
+            })
+            .ToList();
             KategorileriGetir();
         }
 

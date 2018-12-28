@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.kitapKayıtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yazarKayıtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uyeKayıtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,7 +39,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kitapKayıtToolStripMenuItem,
-            this.yazarKayıtToolStripMenuItem});
+            this.yazarKayıtToolStripMenuItem,
+            this.uyeKayıtToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -58,6 +60,13 @@
             this.yazarKayıtToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.yazarKayıtToolStripMenuItem.Text = "Yazar Kayıt";
             this.yazarKayıtToolStripMenuItem.Click += new System.EventHandler(this.yazarKayıtToolStripMenuItem_Click);
+            // 
+            // uyeKayıtToolStripMenuItem
+            // 
+            this.uyeKayıtToolStripMenuItem.Name = "uyeKayıtToolStripMenuItem";
+            this.uyeKayıtToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.uyeKayıtToolStripMenuItem.Text = "Uye Kayıt";
+            this.uyeKayıtToolStripMenuItem.Click += new System.EventHandler(this.uyeKayıtToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -82,6 +91,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem kitapKayıtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yazarKayıtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem uyeKayıtToolStripMenuItem;
     }
 }
 

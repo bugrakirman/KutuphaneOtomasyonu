@@ -36,7 +36,7 @@ namespace KutuphaneOtomasyonu
                     Kategori = x.Kategori
                 })
                 .ToList();
-
+            
             lstYazarlar.DataSource = yazarlar;
 
 
@@ -52,9 +52,11 @@ namespace KutuphaneOtomasyonu
                 Context db = new Context();
                 db.Yazarlar.Add(new Yazar()
                 { 
+                    
                     YazarAdi = txtYazarAd.Text,
                     YazarSoyadi = txtYazarSoyad.Text,
                     Kategori = (KitapKategorileri)Enum.Parse(typeof(KitapKategorileri), cmbYazarKategori.SelectedItem.ToString()),
+                       
                      
                 });
                 int sonuc = db.SaveChanges();
