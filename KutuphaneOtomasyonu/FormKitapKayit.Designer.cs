@@ -107,7 +107,7 @@
             this.lstKitaplar.Name = "lstKitaplar";
             this.lstKitaplar.Size = new System.Drawing.Size(219, 173);
             this.lstKitaplar.TabIndex = 7;
-            this.lstKitaplar.SelectedIndexChanged += new System.EventHandler(this.lstKitaplar_SelectedIndexChanged);
+            //this.lstKitaplar.SelectedIndexChanged += new System.EventHandler(this.lstKitaplar_SelectedIndexChanged);
             // 
             // label4
             // 

@@ -58,6 +58,7 @@
     <Compile Include="Entities\Yazar.cs" />
     <Compile Include="Helpers\ClearHelper.cs" />
     <Compile Include="Helpers\DataHelper.cs" />
+    <Compile Include="Helpers\EntityHelper.cs" />
     <Compile Include="Helpers\SearchHelper.cs" />
     <Compile Include="Migrations\201812280612578_a2.cs" />
     <Compile Include="Migrations\201812280612578_a2.Designer.cs">
@@ -78,6 +79,8 @@
     <Compile Include="Models\Uye.cs" />
     <Compile Include="Models\Yazar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModals\KitapViewModel.cs" />
+    <Compile Include="ViewModals\YazarViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />

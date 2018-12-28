@@ -71,7 +71,7 @@
             this.lstYazarlar.Name = "lstYazarlar";
             this.lstYazarlar.Size = new System.Drawing.Size(219, 173);
             this.lstYazarlar.TabIndex = 18;
-            this.lstYazarlar.SelectedIndexChanged += new System.EventHandler(this.lstYazarlar_SelectedIndexChanged);
+            //this.lstYazarlar.SelectedIndexChanged += new System.EventHandler(this.lstYazarlar_SelectedIndexChanged);
             // 
             // txtYazarSoyad
             // 
