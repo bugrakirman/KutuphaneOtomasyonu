@@ -24,7 +24,7 @@ namespace KutuphaneOtomasyonu
         public static Context Context { get; set; }
         private void Form1_Load(object sender, EventArgs e)
         {
-            Context = new MockData().Context;
+            //Context = new MockData().Context;
         }
 
         private void kitapKayıtToolStripMenuItem_Click(object sender, EventArgs e)

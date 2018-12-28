@@ -31,10 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FakeData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FakeData.1.0.0\lib\FakeData.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -47,9 +54,24 @@
   <ItemGroup>
     <Compile Include="Data\Context.cs" />
     <Compile Include="Data\MockData.cs" />
+    <Compile Include="Entities\Kitap.cs" />
+    <Compile Include="Entities\Yazar.cs" />
     <Compile Include="Helpers\ClearHelper.cs" />
     <Compile Include="Helpers\DataHelper.cs" />
     <Compile Include="Helpers\SearchHelper.cs" />
+    <Compile Include="Migrations\201812280612578_a2.cs" />
+    <Compile Include="Migrations\201812280612578_a2.Designer.cs">
+      <DependentUpon>201812280612578_a2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812280644279_a3.cs" />
+    <Compile Include="Migrations\201812280644279_a3.Designer.cs">
+      <DependentUpon>201812280644279_a3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812280656247_a4.cs" />
+    <Compile Include="Migrations\201812280656247_a4.Designer.cs">
+      <DependentUpon>201812280656247_a4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Kayit.cs" />
     <Compile Include="Models\Kitap.cs" />
     <Compile Include="Models\KitapKategorileri.cs" />
@@ -61,7 +83,19 @@
     <Folder Include="Business\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201812280612578_a2.resx">
+      <DependentUpon>201812280612578_a2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280644279_a3.resx">
+      <DependentUpon>201812280644279_a3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280656247_a4.resx">
+      <DependentUpon>201812280656247_a4.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
-﻿using Kutuphane.Lib.Models;
+﻿using Kutuphane.Lib.Entities;
+using Kutuphane.Lib.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +13,9 @@ namespace Kutuphane.Lib.Helpers
         public static List<T> Ara<T>(List<T> dataSource, string param) where T : Kitap
         {
             param = param.ToLower();
-            return dataSource.Where(x => x.KitapAd.ToLower().Contains(param)
-                                         || x.YazarAd.ToLower().Contains(param)
-                                         || x.YazarSoyad.ToLower().Contains(param)).ToList();
+            return dataSource.Where(x => x.KitapAdi.ToLower().Contains(param)
+                                         || x.YazarAdi.ToLower().Contains(param)
+                                         || x.YazarSoyadi.ToLower().Contains(param)).ToList();
         }
     }
 }

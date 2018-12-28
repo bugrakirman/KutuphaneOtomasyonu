@@ -1,13 +1,8 @@
-﻿using Kutuphane.Lib.Helpers;
+﻿using Kutuphane.Lib.Entities;
+using Kutuphane.Lib.Helpers;
 using Kutuphane.Lib.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KutuphaneOtomasyonu
@@ -26,9 +21,9 @@ namespace KutuphaneOtomasyonu
             if (txtKitapAd.Text == null || txtYazarAd.Text == null || txtYazarSoyad.Text == null) return;
             lstKitaplar.Items.Clear();
             Form1.Context.Kitaplar.Add(new Kitap() {
-                KitapAd = txtKitapAd.Text,
-                YazarAd = txtYazarAd.Text,
-                YazarSoyad = txtYazarSoyad.Text,
+                KitapAdi = txtKitapAd.Text,
+                YazarAdi = txtYazarAd.Text,
+                YazarSoyadi = txtYazarSoyad.Text,
                 
             
         });
@@ -41,9 +36,9 @@ namespace KutuphaneOtomasyonu
         {
             if (lstKitaplar.SelectedItem == null) return;
             Kitap seciliKitap = lstKitaplar.SelectedItem as Kitap;
-            txtKitapAd.Text = seciliKitap.KitapAd;
-            txtYazarAd.Text = seciliKitap.YazarAd;
-            txtYazarSoyad.Text = seciliKitap.YazarSoyad;
+            txtKitapAd.Text = seciliKitap.KitapAdi;
+            txtYazarAd.Text = seciliKitap.YazarAdi;
+            txtYazarSoyad.Text = seciliKitap.YazarSoyadi;
         }
 
         private void frmKitapKayit_Load(object sender, EventArgs e)
@@ -53,7 +48,7 @@ namespace KutuphaneOtomasyonu
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            lstKitaplar.DataSource = SearchHelper.Ara<Kitap>(Form1.Context.Kitaplar, txtAra.Text);
+            lstKitaplar.DataSource = SearchHelper.Ara<Kitap>(Form1.Context.Kitaplar.ToList(), txtAra.Text);//added tolist()
         }
     }
 }

@@ -1,13 +1,8 @@
-﻿using Kutuphane.Lib.Helpers;
+﻿using Kutuphane.Lib.Entities;
+using Kutuphane.Lib.Helpers;
 using Kutuphane.Lib.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KutuphaneOtomasyonu
@@ -31,8 +26,8 @@ namespace KutuphaneOtomasyonu
             lstYazarlar.Items.Clear();
             Form1.Context.Kitaplar.Add(new Kitap()
             {
-                YazarAd = txtYazarAd.Text,
-                YazarSoyad = txtYazarSoyad.Text,
+                YazarAdi = txtYazarAd.Text,
+                YazarSoyadi = txtYazarSoyad.Text,
 
 
             });
@@ -44,8 +39,8 @@ namespace KutuphaneOtomasyonu
         {
             if (lstYazarlar.SelectedItem == null) return;
             Yazar seciliYazar = lstYazarlar.SelectedItem as Yazar;
-            txtYazarAd.Text = seciliYazar.Ad;
-            txtYazarSoyad.Text = seciliYazar.Soyad;
+            txtYazarAd.Text = seciliYazar.YazarAdi;
+            txtYazarSoyad.Text = seciliYazar.YazarSoyadi;
         }
     }
 }
