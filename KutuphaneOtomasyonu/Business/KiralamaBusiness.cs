@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kutuphane.Lib.Models
+namespace KutuphaneOtomasyonu.Business
 {
-    public class Kayit
+    public class KiralamaBusiness
     {
     }
 }

@@ -1,7 +1,5 @@
 ﻿using Kutuphane.Lib.Entities;
-using Kutuphane.Lib.Models;
 using KutuphaneOtomasyonu.Entities;
-using System.Collections.Generic;
 using System.Data.Entity;
 
 namespace Kutuphane.Lib.Data
@@ -15,7 +13,7 @@ namespace Kutuphane.Lib.Data
         }
 
         public virtual DbSet<Kitap> Kitaplar { get; set; }
-        //public virtual DbSet<Kayit> Kayitlar { get; set; }
+        public virtual DbSet<Kayit> Kayitlar { get; set; }
         public virtual DbSet<Yazar> Yazarlar { get; set; }
         public virtual DbSet<Uye> Uyeler { get; set; }
 

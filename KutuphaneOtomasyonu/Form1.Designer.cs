@@ -32,6 +32,7 @@
             this.kitapKayıtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yazarKayıtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uyeKayıtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kitapKiralamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +41,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kitapKayıtToolStripMenuItem,
             this.yazarKayıtToolStripMenuItem,
-            this.uyeKayıtToolStripMenuItem});
+            this.uyeKayıtToolStripMenuItem,
+            this.kitapKiralamaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -68,6 +70,13 @@
             this.uyeKayıtToolStripMenuItem.Text = "Uye Kayıt";
             this.uyeKayıtToolStripMenuItem.Click += new System.EventHandler(this.uyeKayıtToolStripMenuItem_Click);
             // 
+            // kitapKiralamaToolStripMenuItem
+            // 
+            this.kitapKiralamaToolStripMenuItem.Name = "kitapKiralamaToolStripMenuItem";
+            this.kitapKiralamaToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.kitapKiralamaToolStripMenuItem.Text = "Kitap Kiralama";
+            this.kitapKiralamaToolStripMenuItem.Click += new System.EventHandler(this.kitapKiralamaToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -92,6 +101,7 @@
         private System.Windows.Forms.ToolStripMenuItem kitapKayıtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yazarKayıtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uyeKayıtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kitapKiralamaToolStripMenuItem;
     }
 }
 

@@ -1,13 +1,14 @@
 ﻿using Kutuphane.Lib.Data;
 using Kutuphane.Lib.Entities;
 using Kutuphane.Lib.Helpers;
-using Kutuphane.Lib.Models;
 using System;
 using System.Linq;
 using System.Windows.Forms;
 using Kutuphane.Lib.ViewModals;
 using System.Data.Entity.Validation;
 using KutuphaneOtomasyonu.ViewModals;
+using KutuphaneOtomasyonu.Business;
+using KutuphaneOtomasyonu.Entities;
 
 namespace KutuphaneOtomasyonu
 {
@@ -50,23 +51,29 @@ namespace KutuphaneOtomasyonu
                 if (txtKitapAd.Text == null ) return;
                 //ep1.Clear();
                 Context db = new Context();
-
-
-
-
+                KitapBusiness kb = new KitapBusiness();
 
                 db.Kitaplar.Add(new Kitap()
                 {
-                      YazarId= (cmbKitapYazarlar.SelectedItem as YazarViewModel).YazarId,
-                       
+                    YazarId = (cmbKitapYazarlar.SelectedItem as YazarViewModel).YazarId,
                     KitapAdi = string.IsNullOrEmpty(txtKitapAd.Text) ? null : txtKitapAd.Text, //boş kaydetmesin diye
                     YazarAdi = (cmbKitapYazarlar.SelectedItem as YazarViewModel).YazarAdi,
                     YazarSoyadi = (cmbKitapYazarlar.SelectedItem as YazarViewModel).YazarSoyadi,
-                    Kategori = (KitapKategorileri)Enum.Parse(typeof(KitapKategorileri),cmbKitapKategori.SelectedItem.ToString())
+                    Kategori = (KitapKategorileri)Enum.Parse(typeof(KitapKategorileri), cmbKitapKategori.SelectedItem.ToString())
+                     
                 });
+                Yazar yzr = new Yazar() {
+                    YazarAdi = (cmbKitapYazarlar.SelectedItem as YazarViewModel).YazarAdi,
+                    YazarSoyadi = (cmbKitapYazarlar.SelectedItem as YazarViewModel).YazarSoyadi
+                };
+                Kitap ktp = new Kitap() {
+                     KitapAdi = string.IsNullOrEmpty(txtKitapAd.Text) ? null : txtKitapAd.Text
+                };
                 int sonuc = db.SaveChanges();
                 MessageBox.Show($"{sonuc} kayit eklendi");
                 KategorileriGetir();
+                kb.KitapEkle(yzr,ktp);
+              
             }
             catch (DbEntityValidationException ex)
             {

@@ -21,6 +21,7 @@ namespace KutuphaneOtomasyonu
         frmKitapKayit frmKitapKayit;
         frmYazarKayit frmYazarKayit;
         frmUyeKayit frmUyeKayit;
+        frmKitapKiralama frmKitapKiralama;
 
         public static Context Context { get; set; }
         private void Form1_Load(object sender, EventArgs e)
@@ -65,6 +66,19 @@ namespace KutuphaneOtomasyonu
                     MdiParent = this
                 };
                 frmUyeKayit.Show();
+            }
+        }
+
+        private void kitapKiralamaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmKitapKiralama == null || frmKitapKiralama.IsDisposed)
+            {
+                frmKitapKiralama = new frmKitapKiralama
+                {
+                    Text = "Kitap Kiralama",
+                    MdiParent = this
+                };
+                frmKitapKiralama.Show();
             }
         }
     }

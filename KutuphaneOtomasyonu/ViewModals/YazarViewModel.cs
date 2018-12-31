@@ -1,4 +1,6 @@
-﻿using Kutuphane.Lib.Models;
+﻿
+
+using KutuphaneOtomasyonu.Entities;
 
 namespace Kutuphane.Lib.ViewModals
 {

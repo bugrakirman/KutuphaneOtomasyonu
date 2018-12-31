@@ -1,5 +1,4 @@
-﻿using Kutuphane.Lib.Models;
-using KutuphaneOtomasyonu.Entities;
+﻿using KutuphaneOtomasyonu.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -32,8 +31,8 @@ namespace Kutuphane.Lib.Entities
         [ForeignKey("YazarId")]
         public virtual Yazar yazar { get; set; }
 
-   
-     
-        
+        public virtual ICollection<Kayit> kayitlar { get; set; } = new HashSet<Kayit>();
+
+
     }
 }

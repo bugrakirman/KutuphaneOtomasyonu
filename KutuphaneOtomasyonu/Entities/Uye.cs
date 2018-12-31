@@ -20,6 +20,6 @@ namespace KutuphaneOtomasyonu.Entities
         [StringLength(30, ErrorMessage = "Uye Soyadi 30 karakterden fazla olamaz")]
         public string UyeSoyadi { get; set; }
 
-        public virtual ICollection<Kitap> kitaplar2 { get; set; } = new HashSet<Kitap>();
+        public virtual ICollection<Kayit> kayitlar { get; set; } = new HashSet<Kayit>();
     }
 }

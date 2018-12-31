@@ -53,9 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\KiralamaBusiness.cs" />
+    <Compile Include="Business\KitapBusiness.cs" />
     <Compile Include="Data\Context.cs" />
     <Compile Include="Data\MockData.cs" />
+    <Compile Include="Entities\IKitapEkleCikar.cs" />
+    <Compile Include="Entities\Kayit.cs" />
     <Compile Include="Entities\Kitap.cs" />
+    <Compile Include="Entities\KitapKategorileri.cs" />
     <Compile Include="Entities\Uye.cs" />
     <Compile Include="Entities\Yazar.cs" />
     <Compile Include="Form1.cs">
@@ -69,6 +74,12 @@
     </Compile>
     <Compile Include="FormKitapKayit.Designer.cs">
       <DependentUpon>FormKitapKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKitapKiralama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKitapKiralama.Designer.cs">
+      <DependentUpon>FormKitapKiralama.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUyeKayit.cs">
       <SubType>Form</SubType>
@@ -102,14 +113,14 @@
     <Compile Include="Migrations\201812281137181_a21.Designer.cs">
       <DependentUpon>201812281137181_a21.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812310748331_a12.cs" />
+    <Compile Include="Migrations\201812310748331_a12.Designer.cs">
+      <DependentUpon>201812310748331_a12.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Kayit.cs" />
-    <Compile Include="Models\Kitap.cs" />
-    <Compile Include="Models\KitapKategorileri.cs" />
-    <Compile Include="Models\Uye.cs" />
-    <Compile Include="Models\Yazar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModals\KayitViewModel.cs" />
     <Compile Include="ViewModals\KitapViewModel.cs" />
     <Compile Include="ViewModals\UyeViewModel.cs" />
     <Compile Include="ViewModals\YazarViewModel.cs" />
@@ -118,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormKitapKayit.resx">
       <DependentUpon>FormKitapKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKitapKiralama.resx">
+      <DependentUpon>FormKitapKiralama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUyeKayit.resx">
       <DependentUpon>FormUyeKayit.cs</DependentUpon>
@@ -136,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812281137181_a21.resx">
       <DependentUpon>201812281137181_a21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812310748331_a12.resx">
+      <DependentUpon>201812310748331_a12.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -160,8 +177,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

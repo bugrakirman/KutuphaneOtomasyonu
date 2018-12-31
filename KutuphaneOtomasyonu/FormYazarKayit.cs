@@ -1,12 +1,12 @@
 ﻿using Kutuphane.Lib.Entities;
 using Kutuphane.Lib.Helpers;
-using Kutuphane.Lib.Models;
 using Kutuphane.Lib.Data;
 using System;
 using System.Linq;
 using System.Windows.Forms;
 using Kutuphane.Lib.ViewModals;
 using System.Data.Entity.Validation;
+using KutuphaneOtomasyonu.Entities;
 
 namespace KutuphaneOtomasyonu
 {
