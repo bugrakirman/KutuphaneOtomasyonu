@@ -24,14 +24,17 @@ namespace KutuphaneOtomasyonu.Entities
         [StringLength(30, ErrorMessage = "Kitap adi 30 karakterden fazla olamaz")]
         public string KitapAdi { get; set; }
 
-        public bool KitapKiradaMi { get; set; }
-
         [Required]
-        [StringLength(60, ErrorMessage = "Uye adi 60 karakterden fazla olamaz")]
+        [StringLength(30, ErrorMessage = "Uye adi 30 karakterden fazla olamaz")]
         public string UyeAdi { get; set; }
 
         [Required]
+        [StringLength(30, ErrorMessage = "Uye adi 30 karakterden fazla olamaz")]
+        public string UyeSoyadi { get; set; }
+
+        [Required]
         public DateTime KiralanmaZamani { get; set; }
+        public bool KitapKiradaMi { get; set; }
 
         public decimal? Ceza { get; set; }
 

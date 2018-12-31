@@ -12,9 +12,10 @@ namespace KutuphaneOtomasyonu.ViewModals
         public int UyeId { get; set; }
         public string KitapAdi { get; set; }
         public string UyeAdi { get; set; }
+        public string UyeSoyadi { get; set; }
         public DateTime KiralanmaZamani { get; set; }
         public bool KitapKiradaMi { get; set; }
         public decimal? Ceza { get; set; }
-        public override string ToString() => $"{KitapAdi} -- {UyeAdi}";
+        public override string ToString() => $"{KitapAdi} -- {UyeAdi} {UyeSoyadi}";
     }
 }

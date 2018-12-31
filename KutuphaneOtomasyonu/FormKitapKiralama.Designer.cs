@@ -34,11 +34,11 @@
             this.btnKirala = new System.Windows.Forms.Button();
             this.btnİade = new System.Windows.Forms.Button();
             this.gbKirala = new System.Windows.Forms.GroupBox();
-            this.gbİade = new System.Windows.Forms.GroupBox();
             this.btnKitapKirala = new System.Windows.Forms.Button();
+            this.gbİade = new System.Windows.Forms.GroupBox();
             this.btnKitapİade = new System.Windows.Forms.Button();
-            this.cmbİadeKitapAdi = new System.Windows.Forms.ComboBox();
             this.cmbİadeUyeAdi = new System.Windows.Forms.ComboBox();
+            this.cmbİadeKitapAdi = new System.Windows.Forms.ComboBox();
             this.gbKirala.SuspendLayout();
             this.gbİade.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +99,16 @@
             this.gbKirala.TabStop = false;
             this.gbKirala.Text = "Kitap Kirala";
             // 
+            // btnKitapKirala
+            // 
+            this.btnKitapKirala.Location = new System.Drawing.Point(131, 154);
+            this.btnKitapKirala.Name = "btnKitapKirala";
+            this.btnKitapKirala.Size = new System.Drawing.Size(75, 23);
+            this.btnKitapKirala.TabIndex = 7;
+            this.btnKitapKirala.Text = "Kirala";
+            this.btnKitapKirala.UseVisualStyleBackColor = true;
+            this.btnKitapKirala.Click += new System.EventHandler(this.btnKitapKirala_Click);
+            // 
             // gbİade
             // 
             this.gbİade.Controls.Add(this.btnKitapİade);
@@ -111,16 +121,6 @@
             this.gbİade.TabStop = false;
             this.gbİade.Text = "Kitap İade";
             // 
-            // btnKitapKirala
-            // 
-            this.btnKitapKirala.Location = new System.Drawing.Point(131, 154);
-            this.btnKitapKirala.Name = "btnKitapKirala";
-            this.btnKitapKirala.Size = new System.Drawing.Size(75, 23);
-            this.btnKitapKirala.TabIndex = 7;
-            this.btnKitapKirala.Text = "Kirala";
-            this.btnKitapKirala.UseVisualStyleBackColor = true;
-            this.btnKitapKirala.Click += new System.EventHandler(this.btnKitapKirala_Click);
-            // 
             // btnKitapİade
             // 
             this.btnKitapİade.Location = new System.Drawing.Point(131, 154);
@@ -129,14 +129,7 @@
             this.btnKitapİade.TabIndex = 11;
             this.btnKitapİade.Text = "İade";
             this.btnKitapİade.UseVisualStyleBackColor = true;
-            // 
-            // cmbİadeKitapAdi
-            // 
-            this.cmbİadeKitapAdi.FormattingEnabled = true;
-            this.cmbİadeKitapAdi.Location = new System.Drawing.Point(6, 19);
-            this.cmbİadeKitapAdi.Name = "cmbİadeKitapAdi";
-            this.cmbİadeKitapAdi.Size = new System.Drawing.Size(200, 21);
-            this.cmbİadeKitapAdi.TabIndex = 8;
+            this.btnKitapİade.Click += new System.EventHandler(this.btnKitapİade_Click);
             // 
             // cmbİadeUyeAdi
             // 
@@ -145,6 +138,14 @@
             this.cmbİadeUyeAdi.Name = "cmbİadeUyeAdi";
             this.cmbİadeUyeAdi.Size = new System.Drawing.Size(200, 21);
             this.cmbİadeUyeAdi.TabIndex = 9;
+            // 
+            // cmbİadeKitapAdi
+            // 
+            this.cmbİadeKitapAdi.FormattingEnabled = true;
+            this.cmbİadeKitapAdi.Location = new System.Drawing.Point(6, 19);
+            this.cmbİadeKitapAdi.Name = "cmbİadeKitapAdi";
+            this.cmbİadeKitapAdi.Size = new System.Drawing.Size(200, 21);
+            this.cmbİadeKitapAdi.TabIndex = 8;
             // 
             // frmKitapKiralama
             // 

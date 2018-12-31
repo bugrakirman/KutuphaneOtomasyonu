@@ -97,25 +97,13 @@
     <Compile Include="Helpers\DataHelper.cs" />
     <Compile Include="Helpers\EntityHelper.cs" />
     <Compile Include="Helpers\SearchHelper.cs" />
-    <Compile Include="Migrations\201812280813430_a1.cs" />
-    <Compile Include="Migrations\201812280813430_a1.Designer.cs">
-      <DependentUpon>201812280813430_a1.cs</DependentUpon>
+    <Compile Include="Migrations\201812310952218_a1.cs" />
+    <Compile Include="Migrations\201812310952218_a1.Designer.cs">
+      <DependentUpon>201812310952218_a1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201812281040076_a11.cs" />
-    <Compile Include="Migrations\201812281040076_a11.Designer.cs">
-      <DependentUpon>201812281040076_a11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812281119061_a2.cs" />
-    <Compile Include="Migrations\201812281119061_a2.Designer.cs">
-      <DependentUpon>201812281119061_a2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812281137181_a21.cs" />
-    <Compile Include="Migrations\201812281137181_a21.Designer.cs">
-      <DependentUpon>201812281137181_a21.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812310748331_a12.cs" />
-    <Compile Include="Migrations\201812310748331_a12.Designer.cs">
-      <DependentUpon>201812310748331_a12.cs</DependentUpon>
+    <Compile Include="Migrations\201812311000486_a11.cs" />
+    <Compile Include="Migrations\201812311000486_a11.Designer.cs">
+      <DependentUpon>201812311000486_a11.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -139,20 +127,11 @@
     <EmbeddedResource Include="FormYazarKayit.resx">
       <DependentUpon>FormYazarKayit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812280813430_a1.resx">
-      <DependentUpon>201812280813430_a1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812310952218_a1.resx">
+      <DependentUpon>201812310952218_a1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812281040076_a11.resx">
-      <DependentUpon>201812281040076_a11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812281119061_a2.resx">
-      <DependentUpon>201812281119061_a2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812281137181_a21.resx">
-      <DependentUpon>201812281137181_a21.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812310748331_a12.resx">
-      <DependentUpon>201812310748331_a12.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812311000486_a11.resx">
+      <DependentUpon>201812311000486_a11.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
