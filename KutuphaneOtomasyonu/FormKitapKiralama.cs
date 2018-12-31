@@ -1,6 +1,7 @@
 ﻿using Kutuphane.Lib.Data;
 using Kutuphane.Lib.Helpers;
 using Kutuphane.Lib.ViewModals;
+using KutuphaneOtomasyonu.Business;
 using KutuphaneOtomasyonu.Entities;
 using KutuphaneOtomasyonu.ViewModals;
 using System;
@@ -127,7 +128,7 @@ namespace KutuphaneOtomasyonu
                     .FirstOrDefault();
 
                 TimeSpan ts = (DateTime.Now - guncelle.KiralanmaZamani);
-                    if (ts.TotalDays > 7)
+                    if (ts.TotalDays <= 7)
                         if (guncelle.KitapKiradaMi == true)
                         {
                             guncelle.KitapKiradaMi = false;
@@ -140,8 +141,13 @@ namespace KutuphaneOtomasyonu
                         }
                     else
                     {
-                        //business ceza
-                    }
+                    ////////////////// generic yapmak gerekebilir ya da ceza business methodu değiştirilecek değeri döndürmüyor !
+                    KiralamaBusiness kb = new KiralamaBusiness();
+                    kb.CezaHesapla(ts.TotalDays);
+                    guncelle.KitapKiradaMi = false;
+                    int sonuc = db.SaveChanges();
+                    MessageBox.Show($"{sonuc} kayit eklendi");
+                }
             }
             catch (DbEntityValidationException ex)
             {
